@@ -5,7 +5,7 @@ Fall 2021
 
 Partner 1: Amy Wang (pw137)
 Partner 2: Lu Liu (ll394)
-Date:
+Date: 11/18/2021
 """
 
 # Import p4tests.
@@ -56,8 +56,40 @@ def ED(src, dest, prob='ED'):
                 sub = dpTable[i-1][j-1]
                 dpTable[i][j] = 1 + min([delete, insert, sub])
                 
-                
-                
+#traceback the edits from the optimal solution
+    i = n
+    j = m
+    while i > 0 and j > 0
+#if the last letters match, move diagonally
+        if src[i-1]  == dest[j-1]:
+            edits.append(('match', str(src[i-1]), i-1))
+            i -= 1
+            j -= 1
+#find the minimum value and the related edits
+        else:
+# the minimum value comes from the left column
+            if dpTable[i] [j-1] + 1 == dpTable [i] [j]:
+                edits.append(('insert', str(dest[j-1]), i))
+                j -= 1
+# the minimum value comes from the upper row
+            elif dpTable[i-1] [j] + 1 == dpTable [i] [j]:
+                edits.append(('delete', str(src[i-1]), i-1))
+                i -= 1
+# the minimum value comes from the diagonal
+            else:
+                edits.append(('sub', str(dest[j-1]), i-1))
+                i -= 1
+                j -= 1
+#base case(the first column: all deletetion)
+    while i > 0:
+        edits.append(('delete', str(src[i-1]), i-1))
+        i -= 1
+#base case(the first row: all insertion)
+    while j > 0:
+        edits.append(('insert', str(dest[j-1]), i))
+        j -= 1
+
+    dist = dpTable [n] [m]             
     return dist, edits
 
 ################################################################################
