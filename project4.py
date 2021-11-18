@@ -3,8 +3,8 @@ Math 560
 Project 4
 Fall 2021
 
-Partner 1:
-Partner 2:
+Partner 1: Amy Wang (pw137)
+Partner 2: Lu Liu (ll394)
 Date:
 """
 
