@@ -59,7 +59,7 @@ def ED(src, dest, prob='ED'):
 #traceback the edits from the optimal solution
     i = n
     j = m
-    while i > 0 and j > 0
+    while i > 0 and j > 0:
 #if the last letters match, move diagonally
         if src[i-1]  == dest[j-1]:
             edits.append(('match', str(src[i-1]), i-1))
